@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 25px;
+    overflow-x: hidden;
+    font-family: Helvetica, Tahoma, Verdana,   sans-serif;
+    font-size: 1rem;
+    color: rgb(75, 75, 75);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+ul, li {
+    display: block;
+}
+a {
+    display: block;
+    text-decoration: none;
+}
+
+h1,h2,h3,a{
+    font-family: 'Bitter', serif;
+    font-weight: 400;
+    color: rgb(105, 105, 105);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    max-width: 90%;
+}
+.header {
+    position: relative;
+
+    margin-top: 15px;
+}
+.logo {
+
+    font-size: 25px;
+    text-transform: capitalize;
+}
+form{
+    align-self: center;
+    display: flex;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 15px;
+    padding: 3px;
+}
+.menu {
+    display: flex;
+    align-items: center;
+}
+.item-menu{
+    margin-right: 15px;
+}
+
+.item-link {
+    text-transform: uppercase;
+}
+
+section {
+    margin-top: 15px;
+}
+.item-flex {
+    display: flex;
+}
+.item-block {
+    margin-right: 65px;
+
+    width: 100%;
+}
+.item-text{
+    margin-top: 25px;
+}
+section{
+    flex: 1 1 55%;
+}
+.item-title {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.item-img img{
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 2em;
+}
+
+article em{
+    color: rgb(155, 155, 155);
+    font-size: 0.7rem;
+}
+
+.aside-list {
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+
+.list {
+    padding: 15px 10px;
+}
+
+.aside-img {
+    padding: 15px;
+}
+.aside-grid {
+    display: inline-grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.aside-grid img{
+    width: 8em;
+}
+footer {
+    margin: 25px 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 95%;
+    }
+    form {
+        position: fixed;
+
+        right: 0;
+        top: 45px;
+    }
+    .aside-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    nav {
+        justify-content: center;
+    }
+    .aside-list {
+        display: none;
+    }
+    .item-flex {
+        flex-direction: column;
+    }
+    .item-flex-block:last-child {
+        width: 100%;
+    }
+    .aside-grid {
+        display: flex;
+    }
+    .aside-img { 
+        max-width: 100%;
+        overflow: auto;
+    }
+    .footer {
+        margin: 5px ;
+    }
+}
